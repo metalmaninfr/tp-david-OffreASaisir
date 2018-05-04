@@ -44,7 +44,7 @@
       color: #666;
       padding: 3px 30px 2px 10px;
       width: 100%;
-      @include for-size(tablet-portrait-up) {
+      @include for-size(desktop-up) {
         display: none;
         width: 90%;
       }
