@@ -1,0 +1,227 @@
+.header-burger-menu {
+  height: 15px;
+  width: 25px;
+  margin-top: -20px;
+  cursor: pointer;
+  &-line {
+    width: 100%;
+    height: 3px;
+    background: red;
+    margin-bottom: 3px;
+  }
+ @include for-size(desktop-up) {
+   display: none;
+ }
+}
+
+.menuBurger {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  z-index: 3;
+  transition: all .4s ease-in-out;
+  background-color: #fff;
+  @include for-size(desktop-up) {
+    display: none;
+  }
+  &-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    & form [type='text'] {
+      font-size: 14px;
+      background-color: #fafafa;
+      height: 35px;
+    }
+    & form {
+      display: flex;
+    }
+    &-input {
+      border-radius: 3px 0 0 3px;
+      border-right: 0;
+      color: #666;
+      padding: 3px 30px 2px 10px;
+      width: 100%;
+      @include for-size(tablet-portrait-up) {
+        display: none;
+        width: 90%;
+      }
+    }
+    &-btn {
+      border-radius: 0 3px 3px 0;
+      padding: 0;
+      vertical-align: top;
+      width: 35px;
+      font-size: 14px;
+      background-color: #fafafa;
+      height: 35px;
+    }
+    &-img {
+      width: 3rem;
+    }
+  }
+
+  &-cross {
+  margin-right: 20px;
+  &-lines {
+    height: 3px;
+    width: 30px;
+    background: $primary-pink;
+    transform: rotate(45deg) translateY(2px) translateX(2px);
+  }
+  &-lines:nth-child(2){
+    transform: rotate(-45deg);
+    }
+  }
+
+  &-login {
+    display: flex;
+    padding: 1rem .5rem;
+    justify-content: space-evenly;
+    @include for-size(tablet-portrait-up) {
+      display: none;
+    }
+
+    &-Ins {
+      border-radius: 2px;
+      padding: 1rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.5;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: $primary-pink;
+
+      @include for-size(tablet-portrait-up) {
+        margin-right: .5rem;
+      }
+    }
+
+    &-Con {
+      border-radius: 2px;
+      padding: 1rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.5;
+      text-decoration: none;
+      background-color: #E5E5E5;
+
+      text-transform: uppercase;
+
+      color: #000;
+    }
+
+  }
+
+  &-containerList {
+    padding: 1rem 0rem;
+  }
+
+  &-list {
+
+    padding: 1rem 0rem;
+  }
+
+  &-listItem {
+    border-top: 2px solid #E5E5E5;
+    padding: 1.5rem;
+
+  }
+
+  &-listItem:last-child {
+    border-bottom: 2px solid #E5E5E5;
+
+    @include for-size(tablet-portrait-up) {
+      border-bottom: none;
+    }
+  }
+
+  &-listLink {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: grey;
+  }
+
+  &-goodDeal {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include for-size(tablet-portrait-up) {
+      display: none;
+    }
+
+    &-btn {
+      background-color: $primary-blue;
+      font-size: 1.7rem;
+      padding: 1rem;
+      color: #fff;
+      border: none;
+      outline: none;
+    }
+
+    &-link {
+      width: 90%;
+      font-size: 1.6rem;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem;
+      letter-spacing: 0.5;
+      background-color: $primary-blue-light;
+    }
+  }
+
+  &-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+    @include for-size(tablet-portrait-up) {
+      display: none;
+    }
+  }
+
+  &-socialLink {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    color: silver;
+    border: 1px solid #F8F8F8;
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: #F5F5F5;
+
+  }
+
+}
+
+.open {
+  left: 0;
+  transition: all .4s ease-out;
+}
+
+.padding-right {
+  padding-right: 1.4rem;
+  padding-left: 1.4rem;
+}
+.chevron-right {
+  margin-left: 2rem;
+}
+
+.pink {
+  color: $primary-pink;
+}
+
+.blue {
+  color: $primary-blue;
+}
+
+.black {
+  color: black;
+}
